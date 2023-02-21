@@ -8,7 +8,6 @@
     @vite('resources/js/app.js')
 </head>
     <body>
-        {{-- "Segnaposto" nella pagina per il contenuto  --}}
         @yield('content')
     </body>
 </html>

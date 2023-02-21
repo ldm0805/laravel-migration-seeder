@@ -19,5 +19,13 @@ use App\Http\Controllers\TrainController as TrainController;
 //     return view('welcome');
 // });
 
-Route::get('/', [TrainController::class, 'getAllTrains'])->name('homepage');
+Route::get('/', [TrainController::class, 'show'])->name('homepage');
 
+function controlBool($bool)
+{
+    if($bool == 1){
+        return 'Si'; 
+    }else{
+        return 'No';
+    }
+}
