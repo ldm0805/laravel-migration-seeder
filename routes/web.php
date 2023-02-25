@@ -21,11 +21,11 @@ use App\Http\Controllers\TrainController as TrainController;
 
 Route::get('/', [TrainController::class, 'show'])->name('homepage');
 
-function controlBool($bool)
-{
-    if($bool == 1){
-        return 'Si'; 
-    }else{
-        return 'No';
-    }
-}
+// function controlBool($bool)
+// {
+//     if($bool == 1){
+//         return 'Si'; 
+//     }else{
+//         return 'No';
+//     }
+// }

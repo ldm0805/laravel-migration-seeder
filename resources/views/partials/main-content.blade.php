@@ -1,6 +1,7 @@
 {{-- Pagina 1 --}}
 @extends('layouts.app')
-    @section('content')
+@inject('utils', 'App\Utils\Utils')
+@section('content')
     <div class="ticketContainer">
         @foreach($trainsData as $traindata)
             <div class="ticket col-3">
@@ -13,8 +14,8 @@
               <div class="ticketDetail">
                 <div class="d-flex flex-column">
                     <p>Orario di partenza: {{$traindata['orario_di_arrivo']}};</p>
-                    <p>Ritardo: {{  controlBool($traindata['in_orario']) }};</p>
-                    <p>Cancellato: {{  controlBool($traindata['cancellato']) }};</p>
+                    <p>Ritardo: {{  $utils->controlBool($traindata['in_orario']) }};</p>
+                    <p>Cancellato: {{  $utils->controlBool($traindata['cancellato']) }};</p>
                 </div>
                 <div class="d-flex flex-column">
                     <p>Stazione di arrivo: {{$traindata['stazione_di_arrivo']}};</p>
